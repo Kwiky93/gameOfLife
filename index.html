@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script type="text/javascript" src="js/LifeController.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
+
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div class="canvasBox">
+      <canvas id="canvas"></canvas>
+    </div>
+
+    <div class="menuFunction">
+      <div class="flexRow">
+        <button id="btn_run" class="menuFunctionButton" value="test">
+          Run
+        </button>
+      </div>
+      <div class="flexRow">
+        <div class="flexCol">Count</div>
+        <div class="flexCol">
+          <input
+            id="count"
+            type="number"
+            min="10"
+            max="1000"
+            value="0"
+            disabled />
+        </div>
+      </div>
+      <div class="flexRow">
+        <div class="flexCol">Ping</div>
+        <div class="flexCol">
+          <input
+            id="ping"
+            type="text"
+            min="10"
+            max="1000"
+            value="0ms"
+            disabled />
+        </div>
+      </div>
+      <div class="flexRow">
+        <button id="btn_step" class="menuFunctionButton" value="test">
+          Step
+        </button>
+      </div>
+      <div class="flexRow">
+        <button id="btn_clear" class="menuFunctionButton" value="test">
+          Clear
+        </button>
+      </div>
+      <div class="flexRow">
+        <div class="flexCol">Rows</div>
+        <div class="flexCol">
+          <input
+            id="rows"
+            сlass="size"
+            type="number"
+            min="10"
+            max="1000"
+            value="100" />
+        </div>
+      </div>
+      <div class="flexRow">
+        <div class="flexCol">Cols:</div>
+        <div class="flexCol">
+          <input
+            id="cols"
+            сlass="size"
+            type="number"
+            min="10"
+            max="1000"
+            value="100" />
+        </div>
+      </div>
+      <div class="flexRow">
+        <button id="btn_size" class="menuFunctionButton size" value="test">
+          Set size
+        </button>
+      </div>
+      <div class="flexRow">
+        <button id="btn_generate" class="menuFunctionButton" value="test">
+          Generate
+        </button>
+      </div>
+    </div>
+  </body>
+</html>

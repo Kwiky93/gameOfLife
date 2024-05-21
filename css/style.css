@@ -1,0 +1,55 @@
+.canvasBox {
+  width: 80%;
+  height: -webkit-fill-available;
+  min-height: fit-content;
+  left: 50%;
+  transform: translate(-50%, 0);
+  position: relative;
+  overflow: scroll;
+  scrollbar-width: none;
+}
+#canvas {
+  outline: 1px solid #000000;
+  cursor: crosshair;
+  position: absolute;
+  /* left: 50%; */
+  /* transform: translate(-50%, 0); */
+}
+
+.menuFunction {
+  position: absolute;
+  width: 140px;
+  outline: solid 1px #000;
+  top: 50px;
+  padding: 10px 15px 10px 10px;
+  border-radius: 5px;
+  /*align-content: center;*/
+  display: flex;
+  flex-flow: column nowrap;
+  /* margin: 10px; */
+}
+.menuFunctionButton {
+  width: 100px;
+  height: 25px;
+  /* margin: 5px; */
+}
+input {
+  width: 100%;
+
+  text-align: right;
+}
+
+.inputBlock {
+  display: flex;
+  flex-flow: column nowrap;
+  margin: 10px;
+}
+.flexRow {
+  display: flex;
+  margin: 5px;
+  flex-direction: row;
+  flex: 0 1 auto;
+}
+.flexCol {
+  flex: 1 1 0;
+}
