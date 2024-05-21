@@ -4,20 +4,16 @@ let speed = 200;
 // let mouseZoom = 1;
 let drawStart = Date.now();
 
-function draw() {
+async function draw() {
   let now = Date.now();
   let delta = now - drawStart;
-  const start = new Date().getTime();
   if (process === "run" && delta > speed) {
-    lifeController.stepLife();
+    await lifeController.stepLife();
     drawStart = Date.now();
   }
   if (process !== "run") {
-    lifeController.stepLife();
+    await lifeController.stepLife();
   }
-  const end = new Date().getTime();
-  inputPing.value = end - start + "ms";
-
   if (process === "run") {
     requestAnimationFrame(draw);
   }
@@ -33,11 +29,19 @@ function setCanvasSize() {
 window.onload = function () {
   cnv = document.querySelector("canvas#canvas");
   inputPing = document.querySelector("input#ping");
-  inputCount = document.querySelector("input#count");
   setCanvasSize();
 
-  cnv.addEventListener("onChangeCountLives", () => {
-    inputCount.value = lifeController.countLives;
+  cnv.addEventListener("onCountLives", () => {
+    document.querySelector("input#count").value = lifeController.countLives;
+  });
+
+  cnv.addEventListener("onCountSteps", () => {
+    document.querySelector("input#steps").value = lifeController.steps;
+  });
+
+  cnv.addEventListener("onTimeExecution", () => {
+    document.querySelector("input#ping").value =
+      lifeController.timeExecution + "ms";
   });
 
   document.getElementById("btn_run").onclick = (ev) => {
